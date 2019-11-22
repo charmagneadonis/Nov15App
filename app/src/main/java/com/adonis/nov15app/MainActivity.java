@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         fname = findViewById(R.id.etfname);
         lname = findViewById(R.id.etlname);
         section = findViewById(R.id.etsection);
+        cursor = helper.getRecords();
     }
 
     public void addRecord (View view) {
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void moveFirst (View v) {
-        cursor = helper.getRecords();
         cursor.moveToFirst();
         id.setText(cursor.getString(0));
         fname.setText(cursor.getString(1));
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void movePrevious (View v) {
-        cursor = helper.getRecords();
+        //cursor = helper.getRecords();
         cursor.moveToPrevious();
         id.setText(cursor.getString(0));
         fname.setText(cursor.getString(1));
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void moveNext (View v) {
-        cursor = helper.getRecords();
+        //cursor = helper.getRecords();
         cursor.moveToNext();
         id.setText(cursor.getString(0));
         fname.setText(cursor.getString(1));
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void moveLast (View v) {
-        cursor = helper.getRecords();
+        //cursor = helper.getRecords();
         cursor.moveToLast();
         id.setText(cursor.getString(0));
         fname.setText(cursor.getString(1));
